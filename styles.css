@@ -86,13 +86,14 @@ button[type="submit"]:hover {
 .image-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
+    gap: 15px;
     width: 100%;
     max-width: 1200px;
     margin: 20px auto;
 }
 
 .image-box {
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
     cursor: pointer;
     overflow: hidden;
     border-radius: 8px;
@@ -153,7 +154,9 @@ pre {
     gap: 5px;
 }
 
-.copy-button, .download-button {
+.copy-button,
+.download-button {
+    margin-bottom: 10px;
     padding: 5px 10px;
     border: none;
     border-radius: 4px;
@@ -161,21 +164,25 @@ pre {
     transition: background-color 0.3s;
 }
 
-.copy-button, .download-button {
+.copy-button,
+.download-button {
     background-color: #007bff;
     color: white;
 }
 
-.dark-mode .copy-button, .dark-mode .download-button {
+.dark-mode .copy-button,
+.dark-mode .download-button {
     background-color: #444;
     color: white;
 }
 
-.copy-button:hover, .download-button:hover {
+.copy-button:hover,
+.download-button:hover {
     background-color: #0056b3;
 }
 
-.dark-mode .copy-button:hover, .dark-mode .download-button:hover {
+.dark-mode .copy-button:hover,
+.dark-mode .download-button:hover {
     background-color: #555;
 }
 
@@ -190,27 +197,58 @@ pre {
 
 button[type="submit"].loading-in {
     animation: loadingInAnimation 0.5s ease-in-out forwards;
-  }
-  
-  button[type="submit"].loading-out {
+}
+
+button[type="submit"].loading-out {
     animation: loadingOutAnimation 0.5s ease-in-out forwards;
-  }
-  
-  @keyframes loadingInAnimation {
+}
+
+@keyframes loadingInAnimation {
     0% {
-      width: 100%;
+        width: 100%;
     }
+
     100% {
-      width: 50%;
+        width: 50%;
     }
-  }
-  
-  @keyframes loadingOutAnimation {
+}
+
+@keyframes loadingOutAnimation {
     0% {
-      width: 50%;
+        width: 50%;
     }
+
     100% {
-      width: 100%;
+        width: 100%;
     }
-  }
-  
+}
+
+.hover-div {
+    margin-top: 20px;
+    width: auto;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.disclaimer {
+    visibility: hidden;
+    width: 80vh;
+    max-width: 500px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 30px;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.hover-div:hover .disclaimer {
+    visibility: visible;
+}

@@ -65,6 +65,8 @@ document.getElementById("inputForm").addEventListener("submit", async function (
       marketplace
     )
 
+    document.getElementById("resultQTY").textContent = "Result: " + data.length
+
     let formattedData = JSON.stringify(data, null, 4)
     document.getElementById("code").textContent = formattedData
 
