@@ -1,4 +1,4 @@
-const apiKey = process.env.MY_API_KEY
+const apiKey = process.env.api_key
 
 const url = "https://mainnet.helius-rpc.com/?api-key=" + apiKey
 
