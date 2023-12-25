@@ -28,11 +28,11 @@ function themeToggle() {
 
   if (currentTheme === "dark-mode") {
     document.body.classList.remove("dark-mode")
-    themeSwitch.textContent = "🌑"
+    switchTheme.textContent = "🌑"
     saveTheme("light-mode")
   } else {
     document.body.classList.add("dark-mode")
-    themeSwitch.textContent = "☀️"
+    switchTheme.textContent = "☀️"
     saveTheme("dark-mode")
   }
 }
@@ -71,7 +71,9 @@ document.getElementById("input-form").addEventListener("submit", async function 
 
   let formattedData = JSON.stringify(data, null, 4)
 
-  document.getElementById("code").textContent = formattedData
+  console.log(formattedData)
+
+  document.getElementsByTagName("code")[0].textContent = formattedData
 
   let codeContainer = document.querySelector(".json-container")
   codeContainer.classList.add("visible")

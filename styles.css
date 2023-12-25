@@ -1,17 +1,25 @@
 body {
     font-family: Arial, sans-serif;
-    padding: 20px;
     transition: background-color 0.3s, color 0.3s;
     margin: 0;
     background-color: #f8f8f8;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.navbar a img {
+    width: 60px;
+}
+
 .switch-theme {
-    font-size: 30px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    margin-top: -20px;
     cursor: pointer;
+    font-size: 30px;
 }
 
 .centered-content-container {
@@ -19,9 +27,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 40px);
+    min-height: calc(100vh - 200px);
     width: 100%;
-    margin: auto;
 }
 
 
@@ -30,11 +37,11 @@ body {
     width: 50vh;
     box-sizing: border-box;
     margin: 20px auto;
-    padding: 30px;
+    padding: 10px 50px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-align: center;
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(210, 210, 210);
 }
 
 input[type="text"] {
@@ -63,6 +70,7 @@ button[type="submit"]:hover {
 .dark-mode {
     background-color: #1e1e1e;
     color: white;
+    margin: 0px;
 }
 
 .dark-mode input[type="text"] {
@@ -87,8 +95,9 @@ button[type="submit"]:hover {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     gap: 15px;
-    width: 100%;
+    width: 50%;
     max-width: 1400px;
+    min-width: 400px;
     margin: 20px auto;
 }
 
@@ -124,7 +133,7 @@ button[type="submit"]:hover {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     padding: 40px;
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(210, 210, 210);
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
