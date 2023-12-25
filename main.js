@@ -4,7 +4,7 @@ window.onload = function () {
   const currentTheme = loadThemePreference()
   if (currentTheme === "dark-mode") {
     document.body.classList.add("dark-mode")
-    document.querySelector(".theme-switch").textContent = "☀️"
+    document.querySelector(".switch-theme").textContent = "☀️"
   }
 }
 
@@ -22,9 +22,9 @@ function loadThemePreference() {
   return localStorage.getItem("theme")
 }
 
-function toggleTheme() {
+function themeToggle() {
   const currentTheme = loadThemePreference()
-  const themeSwitch = document.querySelector(".theme-switch")
+  const themeSwitch = document.querySelector(".switch-theme")
 
   if (currentTheme === "dark-mode") {
     document.body.classList.remove("dark-mode")
@@ -44,10 +44,10 @@ inputField.addEventListener("input", function () {
 
 function hideCodeViewer() {
   document.getElementById("code").textContent = ""
-  document.querySelector(".code-container").classList.remove("visible")
+  document.querySelector(".json-container").classList.remove("visible")
 }
 
-document.getElementById("inputForm").addEventListener("submit", async function (event) {
+document.getElementById("input-form").addEventListener("submit", async function (event) {
     event.preventDefault()
 
     if (event.target.elements["inputField"].value === "") return
@@ -56,7 +56,7 @@ document.getElementById("inputForm").addEventListener("submit", async function (
     submitButton.disabled = true
     submitButton.textContent = "Retrieving Collection..."
 
-    const marketplace = document.getElementById("flickToggle").checked
+    const marketplace = document.getElementById("marketplace-checkbox").checked
 
     submitButton.classList.add("loading-in")
 
@@ -70,7 +70,7 @@ document.getElementById("inputForm").addEventListener("submit", async function (
     let formattedData = JSON.stringify(data, null, 4)
     document.getElementById("code").textContent = formattedData
 
-    let codeContainer = document.querySelector(".code-container")
+    let codeContainer = document.querySelector(".json-container")
     codeContainer.classList.add("visible")
 
     submitButton.classList.remove("loading-in")

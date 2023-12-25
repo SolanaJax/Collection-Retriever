@@ -5,25 +5,22 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="theme-switch" onclick="toggleTheme()">🌑</div>
+    <div class="switch-theme" onclick="themeToggle()">🌑</div>
 
-    <div class="centered-container">
+    <div class="centered-content-container">
       <div class="form-container">
-        <form id="inputForm">
-          <input
-            type="text"
-            id="inputField"
-            placeholder="First Creator Address"
-          />
+        <form id="input-form">
+
+          <input type="text" id="inputField" placeholder="First Creator Address"/>
 
           <div class="form-control">
-            <label for="flickToggle">Exclude Marketplaces</label>
-            <input type="checkbox" id="flickToggle" name="flick" />
+            <label for="marketplace-checkbox">Exclude Marketplaces</label>
+            <input type="checkbox" id="marketplace-checkbox"/>
           </div>
 
           <button type="submit">Get Holderlist</button>
           
-            <div class="hover-div">
+            <div class="disclaimer-div">
               Disclaimer!
               <span class="disclaimer">
                 This tool is provided 'as is' and does not guarantee accurate or correct results. By using this tool, you acknowledge and agree to use it at your own risk.
@@ -36,91 +33,82 @@
         </form>
       </div>
 
-      <div class="code-container">
+      <div class="json-container">
         <button class="copy-button">Copy</button>
         <button class="download-button">Download</button>
         <div styles="margin-top: 5px;" id="resultQTY">Result: </div>
         <pre><code id="code"></code></pre>
       </div>
 
-      <div class="image-grid">
-        <div
-          class="image-box"
-          onclick="fillInput('En54STTsmVrWA3Cd43SQNgiLrihRDG2iMJD6zWPHjYfW')"
-        >
+      <div class="collection-grid">
+
+        <div class="collection-box" onclick="fillInput('En54STTsmVrWA3Cd43SQNgiLrihRDG2iMJD6zWPHjYfW')">
           <img src="media/genesistoken.png" />
         </div>
-        <div
-          class="image-box"
-          onclick="fillInput('AoebZtN5iKpVyUBc82aouWhugVknLzjUmEEUezxviYNo')"
-        >
+
+        <div class="collection-box" onclick="fillInput('AoebZtN5iKpVyUBc82aouWhugVknLzjUmEEUezxviYNo')">
           <img src="media/claynosaurz.png" />
         </div>
-        <div
-          class="image-box"
-          onclick="fillInput('5XvhfmRjwXkGp3jHGmaKpqeerNYjkuZZBYLVQYdeVcRv')"
-        >
+
+        <div class="collection-box" onclick="fillInput('5XvhfmRjwXkGp3jHGmaKpqeerNYjkuZZBYLVQYdeVcRv')">
           <img src="media/madlads.jpg" />
         </div>
-        <div
-          class="image-box"
-          onclick="fillInput('bhcXAKhcRFaBpmRvK6JQY6SNYyKzTrYmija5oBAPYia')"
-        >
+
+        <div class="collection-box" onclick="fillInput('bhcXAKhcRFaBpmRvK6JQY6SNYyKzTrYmija5oBAPYia')">
           <img src="media/namaste.png" />
         </div>
-        <div
-          class="image-box"
-          onclick="fillInput('mdaoxg4DVGptU4WSpzGyVpK3zqsgn7Qzx5XNgWTcEA2')"
-        >
+
+        <div class="collection-box" onclick="fillInput('mdaoxg4DVGptU4WSpzGyVpK3zqsgn7Qzx5XNgWTcEA2')">
           <img src="media/smb2.png" />
         </div>
-        <div
-          class="image-box"
-          onclick="fillInput('HV4Nvm9zHfNA43JYYkjZu8vwqiuE8bfEhwcKFfyQ65o5')"
-        >
+
+        <div class="collection-box" onclick="fillInput('HV4Nvm9zHfNA43JYYkjZu8vwqiuE8bfEhwcKFfyQ65o5')">
           <img src="media/smb3.png" />
         </div>
-        <div
-          class="image-box"
-          onclick="fillInput('DjyHEfUv6EhVwchqjmy3b46Td2ZzXenHzUKdu6yJfCeZ')"
-        >
+
+        <div class="collection-box" onclick="fillInput('DjyHEfUv6EhVwchqjmy3b46Td2ZzXenHzUKdu6yJfCeZ')">
           <img src="media/quekz.png" />
         </div>
-        <div
-          class="image-box"
-          onclick="fillInput('3xVDoLaecZwXXtN59o6T3Gfxwjcgf8Hc9RfoqBn995P9')"
-        >
+
+        <div class="collection-box" onclick="fillInput('3xVDoLaecZwXXtN59o6T3Gfxwjcgf8Hc9RfoqBn995P9')">
           <img src="media/okaybear.png" />
         </div>
-        <div
-          class="image-box"
-          onclick="fillInput('FEg3mmpcrcRsVTuc2n3oghHpRvAtEJJau4KWjaPpLKcA')"
-        >
+
+        <div class="collection-box" onclick="fillInput('FEg3mmpcrcRsVTuc2n3oghHpRvAtEJJau4KWjaPpLKcA')">
           <img src="media/gg.png" />
         </div>
-        <div
-          class="image-box"
-          onclick="fillInput('8EthPxADcqvv8CHFTBbW2DsSSFykFKaAkkKqUhkupdsa')"
-        >
+
+        <div class="collection-box" onclick="fillInput('8EthPxADcqvv8CHFTBbW2DsSSFykFKaAkkKqUhkupdsa')">
           <img src="media/metame.jpg" />
         </div>
-        <div
-          class="image-box"
-          onclick="fillInput('HdLDoLQjQ9oURfT4o1LKvKkfh2pFEG1WX7C8QnJF5AUw')"
-        >
+
+        <div class="collection-box" onclick="fillInput('HdLDoLQjQ9oURfT4o1LKvKkfh2pFEG1WX7C8QnJF5AUw')">
           <img src="media/bodo.jpg" />
         </div>
-        <div
-          class="image-box"
-          onclick="fillInput('ESWcNfagB4ixp5byYRAwR8VrsrX9FMpL2D5EPZD8ga8Q')"
-        >
+
+        <div class="collection-box" onclick="fillInput('ESWcNfagB4ixp5byYRAwR8VrsrX9FMpL2D5EPZD8ga8Q')">
           <img src="media/rex.jpg" />
         </div>
+
+        <div class="collection-box" onclick="fillInput('DvZfhaWCjA2uCWgimRm6F59vHkeXyGvEvvVQPhiqosn2')">
+          <img src="media/whales.png" />
+        </div>
+
+        <div class="collection-box" onclick="fillInput('GuDEZFxcox57oRdpKpbF72tZfNpKHkc6T2G89cBtcFYn')">
+          <img src="media/bonkz.png" />
+        </div>
+
+        <div class="collection-box" onclick="fillInput('DivyPfXM84oUP4LqW4YN2nNujHBRoggUDAKf9spppncD')">
+          <img src="media/wolf.jpg" />
+        </div>
+
       </div>
+
       <img style="border-radius: 90px; margin-top: 100px; width: 5vh;" src="media/solanajax.png">
       <div style="margin-top: 10px;">
         Made with <span class="heart">💜</span> by <a target="_blank" href="https://twitter.com/SolanaJax">Solana Jax</a>
       </div>
+
     </div>
     <script src="main.js"></script>
   </body>

@@ -6,7 +6,7 @@ body {
     background-color: #f8f8f8;
 }
 
-.theme-switch {
+.switch-theme {
     font-size: 30px;
     position: absolute;
     top: 20px;
@@ -14,7 +14,7 @@ body {
     cursor: pointer;
 }
 
-.centered-container {
+.centered-content-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,16 +83,16 @@ button[type="submit"]:hover {
     background-color: #444;
 }
 
-.image-grid {
+.collection-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     gap: 15px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 20px auto;
 }
 
-.image-box {
+.collection-box {
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
     cursor: pointer;
     overflow: hidden;
@@ -101,7 +101,7 @@ button[type="submit"]:hover {
     padding-top: 100%;
 }
 
-.image-box img {
+.collection-box img {
     position: absolute;
     top: 0;
     left: 0;
@@ -111,11 +111,11 @@ button[type="submit"]:hover {
     transition: transform 0.3s ease;
 }
 
-.image-box:hover img {
+.collection-box:hover img {
     transform: scale(1.1);
 }
 
-.code-container {
+.json-container {
     position: relative;
     max-width: 1200px;
     min-width: 800px;
@@ -136,7 +136,7 @@ pre {
     height: calc(100% - 50px);
 }
 
-.dark-mode .code-container {
+.dark-mode .json-container {
     background-color: #252525;
     color: white;
 }
@@ -186,7 +186,7 @@ pre {
     background-color: #555;
 }
 
-.code-container.visible {
+.json-container.visible {
     display: block;
     opacity: 1;
 }
@@ -203,27 +203,7 @@ button[type="submit"].loading-out {
     animation: loadingOutAnimation 0.5s ease-in-out forwards;
 }
 
-@keyframes loadingInAnimation {
-    0% {
-        width: 100%;
-    }
-
-    100% {
-        width: 50%;
-    }
-}
-
-@keyframes loadingOutAnimation {
-    0% {
-        width: 50%;
-    }
-
-    100% {
-        width: 100%;
-    }
-}
-
-.hover-div {
+.disclaimer-div {
     margin-top: 20px;
     width: auto;
     position: relative;
@@ -249,6 +229,26 @@ button[type="submit"].loading-out {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-.hover-div:hover .disclaimer {
+.disclaimer-div:hover .disclaimer {
     visibility: visible;
+}
+
+@keyframes loadingInAnimation {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes loadingOutAnimation {
+    0% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+    }
 }
