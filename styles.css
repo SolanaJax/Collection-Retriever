@@ -187,3 +187,30 @@ pre {
 .form-control {
     margin: 10px
 }
+
+button[type="submit"].loading-in {
+    animation: loadingInAnimation 0.5s ease-in-out forwards;
+  }
+  
+  button[type="submit"].loading-out {
+    animation: loadingOutAnimation 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes loadingInAnimation {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 50%;
+    }
+  }
+  
+  @keyframes loadingOutAnimation {
+    0% {
+      width: 50%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
