@@ -1,96 +1,102 @@
 const rpcURLFromHeliusThatIDontCareIsExposedForThisToolSinceItIsTheBasicFreeOneAndItsJustAToolToHelpPeople = "https://mainnet.helius-rpc.com/?api-key=c31bcee9-bae5-4ce0-84ef-c8cf03452996"
 
-window.onload = function () {
-  const currentTheme = loadThemePreference()
-  if (currentTheme === "dark-mode") {
-    document.body.classList.add("dark-mode")
-    document.querySelector(".switch-theme").textContent = "☀️"
-  }
-}
-
 // List of blacklisted addresses in order (Tensor, Magiceden)
 const blacklistedMarketplaceOwners = [
   "4zdNGgAtFsW1cQgHqkiWyRsxaAgxrSRRynnuunxzjxue",
   "1BWutmTvYPwDtmw9abTkS4Ssr8no61spGAvW1X6NDix",
 ]
 
-function saveThemePreference(theme) {
+window.onload = function () {
+  const currentTheme = loadTheme()
+  if (currentTheme === "dark-mode") {
+    document.body.classList.add("dark-mode")
+    document.querySelector(".switch-theme").textContent = "☀️"
+  }
+}
+
+function saveTheme(theme) {
   localStorage.setItem("theme", theme)
 }
 
-function loadThemePreference() {
+function loadTheme() {
   return localStorage.getItem("theme")
 }
 
 function themeToggle() {
-  const currentTheme = loadThemePreference()
-  const themeSwitch = document.querySelector(".switch-theme")
+  const currentTheme = loadTheme()
+  const switchTheme = document.querySelector(".switch-theme")
 
   if (currentTheme === "dark-mode") {
     document.body.classList.remove("dark-mode")
     themeSwitch.textContent = "🌑"
-    saveThemePreference("light-mode")
+    saveTheme("light-mode")
   } else {
     document.body.classList.add("dark-mode")
     themeSwitch.textContent = "☀️"
-    saveThemePreference("dark-mode")
+    saveTheme("dark-mode")
   }
 }
 
 const inputField = document.getElementById("inputField")
+
 inputField.addEventListener("input", function () {
-  hideCodeViewer()
+  hideJSONViewer()
 })
 
-function hideCodeViewer() {
-  document.getElementById("code").textContent = ""
+function hideJSONViewer() {
+  document.getElementById("JSON-CODE").textContent = ""
   document.querySelector(".json-container").classList.remove("visible")
 }
 
 document.getElementById("input-form").addEventListener("submit", async function (event) {
-    event.preventDefault()
+    
+  event.preventDefault()
 
-    if (event.target.elements["inputField"].value === "") return
+  if (event.target.elements["inputField"].value === "") return
 
-    const submitButton = document.querySelector('button[type="submit"]')
-    submitButton.disabled = true
-    submitButton.textContent = "Retrieving Collection..."
+  const retriveButton = document.querySelector('button[type="submit"]')
+  retriveButton.textContent = "Retrieving Collection..."
+  retriveButton.disabled = true
 
-    const marketplace = document.getElementById("marketplace-checkbox").checked
+  const marketplace = document.getElementById("marketplace-checkbox").checked
 
-    submitButton.classList.add("loading-in")
+  retriveButton.classList.add("loading-in")
 
-    let data = await fetchCollection(
-      event.target.elements["inputField"].value,
-      marketplace
-    )
+  let data = await fetchCollection(
+    event.target.elements["inputField"].value,
+    marketplace
+  )
 
-    document.getElementById("resultQTY").textContent = "Result: " + data.length
+  document.getElementById("resultQTY").textContent = "Result: " + data.length
 
-    let formattedData = JSON.stringify(data, null, 4)
-    document.getElementById("code").textContent = formattedData
+  let formattedData = JSON.stringify(data, null, 4)
 
-    let codeContainer = document.querySelector(".json-container")
-    codeContainer.classList.add("visible")
+  document.getElementById("code").textContent = formattedData
 
-    submitButton.classList.remove("loading-in")
-    submitButton.classList.add("loading-out")
+  let codeContainer = document.querySelector(".json-container")
+  codeContainer.classList.add("visible")
 
-    submitButton.textContent = "Get Holderlist"
+  retriveButton.classList.remove("loading-in")
+  retriveButton.classList.add("loading-out")
 
-    setTimeout(() => {
-      submitButton.disabled = false
-      submitButton.classList.remove("loading-out")
-    }, 1000)
-  })
+  retriveButton.textContent = "Get Holderlist"
+
+  setTimeout(() => {
+    retriveButton.disabled = false
+    retriveButton.classList.remove("loading-out")
+  }, 1000)
+})
 
 document.querySelector(".copy-button").addEventListener("click", function () {
+
   let code = document.getElementById("code").textContent
+
   navigator.clipboard.writeText(code).then(() => {
     let originalText = this.textContent
     this.textContent = "Copied!"
     setTimeout(() => (this.textContent = originalText), 2000)
   })
+
 })
 
 document.querySelector(".download-button").addEventListener("click", function () {
@@ -105,11 +111,11 @@ document.querySelector(".download-button").addEventListener("click", function ()
     a.click()
     document.body.removeChild(a)
     URL.revokeObjectURL(url)
-  })
+})
 
 function fillInput(text) {
   document.getElementById("inputField").value = text
-  hideCodeViewer()
+  hideJSONViewer()
 }
 
 const fetchCollection = async (creatorAddress, marketplace) => {
