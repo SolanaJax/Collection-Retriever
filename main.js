@@ -62,16 +62,22 @@ document.getElementById("input-form").addEventListener("submit", async function 
 
   retriveButton.classList.add("loading-in")
 
-  let data = await fetchCollection(
-    event.target.elements["inputField"].value,
-    marketplace
-  )
+  let data
+  if (document.getElementById("MCC-checkbox").checked) {
+    data = await fetchMCC(
+      event.target.elements["inputField"].value,
+      marketplace
+    )
+  } else {
+    data = await fetchCreatorArrayCollection(
+      event.target.elements["inputField"].value,
+      marketplace
+    )
+  }
 
   document.getElementById("resultQTY").textContent = "Result: " + data.length
 
   let formattedData = JSON.stringify(data, null, 4)
-
-  console.log(formattedData)
 
   document.getElementsByTagName("code")[0].textContent = formattedData
 
@@ -115,12 +121,18 @@ document.querySelector(".download-button").addEventListener("click", function ()
     URL.revokeObjectURL(url)
 })
 
-function fillInput(text) {
+function fillInput(text, MCC) {
   document.getElementById("inputField").value = text
+  if (MCC) {
+    document.getElementById("MCC-checkbox").checked = true
+  } else {
+    document.getElementById("MCC-checkbox").checked = false
+  }
+
   hideJSONViewer()
 }
 
-const fetchCollection = async (creatorAddress, marketplace) => {
+const fetchCreatorArrayCollection = async (creatorAddress, marketplace) => {
   let page = 1
   let mintList = []
   let holderList = []
@@ -139,6 +151,65 @@ const fetchCollection = async (creatorAddress, marketplace) => {
         params: {
           creatorAddress: creatorAddress,
           onlyVerified: true,
+          page: page,
+          limit: 1000,
+        },
+      }),
+    })
+
+    const { result } = await response.json()
+
+    for (const nfts of result.items) {
+      if (nfts.burnt === false) {
+        mintList.push(nfts.id)
+        holderList.push(nfts.ownership.owner)
+      }
+    }
+
+    if (result.total !== 1000) {
+      page = false
+    } else {
+      page++
+    }
+  }
+
+  if (marketplace) {
+    for (const holderAddress of holderList) {
+      let blacklisted = false
+      for (const blacklistedAddress of blacklistedMarketplaceOwners) {
+        if (blacklistedAddress === holderAddress) {
+          blacklisted = true
+        }
+      }
+      if (!blacklisted) {
+        noMarketplaceHolderList.push(holderAddress)
+      }
+    }
+    return noMarketplaceHolderList
+  } else {
+    return holderList
+  }
+}
+
+const fetchMCC = async (creatorAddress, marketplace) => {
+  let page = 1
+  let mintList = []
+  let holderList = []
+  let noMarketplaceHolderList = []
+
+  while (page) {
+    const response = await fetch(rpcURLFromHeliusThatIDontCareIsExposedForThisToolSinceItIsTheBasicFreeOneAndItsJustAToolToHelpPeople, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        jsonrpc: "2.0",
+        id: "my-id",
+        method: "getAssetsByGroup",
+        params: {
+          groupKey: 'collection',
+          groupValue: creatorAddress,
           page: page,
           limit: 1000,
         },
