@@ -1,6 +1,4 @@
-const apiKey = process.env.API_KEY
-
-const url = "https://mainnet.helius-rpc.com/?api-key=" + apiKey
+const rpcURLFromHeliusThatIDontCareIsExposedForThisToolSinceItIsTheBasicFreeOneAndItsJustAToolToHelpPeople = "https://mainnet.helius-rpc.com/?api-key=c31bcee9-bae5-4ce0-84ef-c8cf03452996"
 
 window.onload = function () {
   const currentTheme = loadThemePreference()
@@ -119,7 +117,7 @@ const fetchCollection = async (creatorAddress, marketplace) => {
   let noMarketplaceHolderList = []
 
   while (page) {
-    const response = await fetch(url, {
+    const response = await fetch(rpcURLFromHeliusThatIDontCareIsExposedForThisToolSinceItIsTheBasicFreeOneAndItsJustAToolToHelpPeople, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
