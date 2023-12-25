@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Saga Dropper</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="theme-switch" onclick="toggleTheme()">🌑</div>
+
+    <div class="centered-container">
+      <div class="form-container">
+        <form id="inputForm">
+          <input
+            type="text"
+            id="inputField"
+            placeholder="First Creator Address"
+          />
+
+          <div class="form-control">
+            <label for="flickToggle">Exclude Marketplaces</label>
+            <input type="checkbox" id="flickToggle" name="flick" />
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="code-container">
+        <button class="copy-button">Copy</button>
+        <button class="download-button">Download</button>
+        <pre><code id="code"></code></pre>
+      </div>
+
+      <div class="image-grid">
+        <div
+          class="image-box"
+          onclick="fillInput('En54STTsmVrWA3Cd43SQNgiLrihRDG2iMJD6zWPHjYfW')"
+        >
+          <img src="media/GenesisToken.png" />
+        </div>
+        <div
+          class="image-box"
+          onclick="fillInput('AoebZtN5iKpVyUBc82aouWhugVknLzjUmEEUezxviYNo')"
+        >
+          <img src="media/claynosaurz.png" />
+        </div>
+        <div
+          class="image-box"
+          onclick="fillInput('5XvhfmRjwXkGp3jHGmaKpqeerNYjkuZZBYLVQYdeVcRv')"
+        >
+          <img src="media/madlads.jpg" />
+        </div>
+        <div
+          class="image-box"
+          onclick="fillInput('bhcXAKhcRFaBpmRvK6JQY6SNYyKzTrYmija5oBAPYia')"
+        >
+          <img src="media/namaste.png" />
+        </div>
+        <div
+          class="image-box"
+          onclick="fillInput('mdaoxg4DVGptU4WSpzGyVpK3zqsgn7Qzx5XNgWTcEA2')"
+        >
+          <img src="media/smb2.png" />
+        </div>
+        <div
+          class="image-box"
+          onclick="fillInput('HV4Nvm9zHfNA43JYYkjZu8vwqiuE8bfEhwcKFfyQ65o5')"
+        >
+          <img src="media/smb3.png" />
+        </div>
+        <div
+          class="image-box"
+          onclick="fillInput('DjyHEfUv6EhVwchqjmy3b46Td2ZzXenHzUKdu6yJfCeZ')"
+        >
+          <img src="media/quekz.png" />
+        </div>
+        <div
+          class="image-box"
+          onclick="fillInput('3xVDoLaecZwXXtN59o6T3Gfxwjcgf8Hc9RfoqBn995P9')"
+        >
+          <img src="media/okaybear.png" />
+        </div>
+        <div
+          class="image-box"
+          onclick="fillInput('FEg3mmpcrcRsVTuc2n3oghHpRvAtEJJau4KWjaPpLKcA')"
+        >
+          <img src="media/gg.png" />
+        </div>
+        <div
+          class="image-box"
+          onclick="fillInput('GuDEZFxcox57oRdpKpbF72tZfNpKHkc6T2G89cBtcFYn')"
+        >
+          <img src="media/bonkz.png" />
+        </div>
+        <div
+          class="image-box"
+          onclick="fillInput('HdLDoLQjQ9oURfT4o1LKvKkfh2pFEG1WX7C8QnJF5AUw')"
+        >
+          <img src="media/bodo.jpg" />
+        </div>
+        <div
+          class="image-box"
+          onclick="fillInput('ESWcNfagB4ixp5byYRAwR8VrsrX9FMpL2D5EPZD8ga8Q')"
+        >
+          <img src="media/rex.jpg" />
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
