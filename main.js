@@ -97,7 +97,7 @@ document.getElementById("input-form").addEventListener("submit", async function 
 
 document.querySelector(".copy-button").addEventListener("click", function () {
 
-  let code = document.getElementById("code").textContent
+  let code = document.getElementsByTagName("code")[0].textContent
 
   navigator.clipboard.writeText(code).then(() => {
     let originalText = this.textContent
@@ -108,7 +108,7 @@ document.querySelector(".copy-button").addEventListener("click", function () {
 })
 
 document.querySelector(".download-button").addEventListener("click", function () {
-    let code = document.getElementById("code").textContent
+    let code = document.getElementsByTagName("code")[0].textContent
     let blob = new Blob([code], { type: "application/json" })
     let url = URL.createObjectURL(blob)
 
