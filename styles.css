@@ -102,11 +102,11 @@ button[type="submit"]:hover {
 }
 
 .collection-box {
+    position: relative;
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
     cursor: pointer;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 8px;
-    position: relative;
     padding-top: 100%;
 }
 
@@ -118,6 +118,27 @@ button[type="submit"]:hover {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.info-box {
+    display: none;
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background-color: rgba(0, 0, 0);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 2;
+    border-radius: 8px;
+}
+
+
+.collection-box:hover .info-box {
+    display: block;
 }
 
 .collection-box:hover img {
@@ -240,6 +261,10 @@ button[type="submit"].loading-out {
 
 .disclaimer-div:hover .disclaimer {
     visibility: visible;
+}
+
+#collectionName {
+    margin-bottom: 10px;
 }
 
 @keyframes loadingInAnimation {
