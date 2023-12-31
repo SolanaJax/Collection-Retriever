@@ -16,6 +16,7 @@ const collectionBoxArray = [
   { id: 'BuAYoZPVwQw4AfeEpHTx6iGPbQtB27W7tJUjgyLzgiko', imgSrc: 'media/quekz.png', text: 'Quekz', mcc: true },
   { id: '3saAedkM9o5g1u5DCqsuMZuC4GRqPB4TuMkvSsSVvGQ3', imgSrc: 'media/okaybear.png', text: 'Okay Bear', mcc: true },
   { id: 'J6RJFQfLgBTcoAt3KoZFiTFW9AbufsztBNDgZ7Znrp1Q', imgSrc: 'media/gg.png', text: 'Galactic Gecko', mcc: true },
+
   { id: 'HLGE9SnPUzS5wWdLXbqbmKiTpUxWKjRFL78y6uey8pSe', imgSrc: 'media/metame.jpg', text: 'Metame', mcc: true },
   { id: '69k55dCTwiUPNgaTZ8FVMADorTvEGJEGuAGEB7m1qB1S', imgSrc: 'media/bodo.jpg', text: 'BoDoggos', mcc: true },
   { id: 'ESWcNfagB4ixp5byYRAwR8VrsrX9FMpL2D5EPZD8ga8Q', imgSrc: 'media/rex.jpg', text: 'Annoyed Rex Club', mcc: false },
@@ -25,6 +26,7 @@ const collectionBoxArray = [
   { id: '8vE4uASPp9WbS9Ls2qzJ9fpUBpR3UrTG3hBZXdAJQ9mz', imgSrc: 'media/mbb.png', text: 'Monkey Baby Business', mcc: true },
   { id: 'DSwfRF1jhhu6HpSuzaig1G19kzP73PfLZBPLofkw6fLD', imgSrc: 'media/daa.png', text: 'Degenerate Ape Academy', mcc: true },
   { id: 'BUjZjAS2vbbb65g7Z1Ca9ZRVYoJscURG5L3AkVvHP9ac', imgSrc: 'media/fff.svg', text: 'Famous Fox Federation', mcc: true },
+
   { id: 'B7aepuPdsXJytu28j4UJQNrLLieMxoSYjyHMf2P9VFDi', imgSrc: 'media/sdg.jpg', text: 'Exiled DeGods', mcc: false },
   { id: '6o3ggULJGUBX8CvsGhomfZFirUYdH3wVdgT2d4Q7yHb8', imgSrc: 'media/sac.png', text: 'Stoned Ape Crew', mcc: true },
   { id: '2kEAck1FyW8TxB5SprEnasb4gkaahTdDV83wPtxm9y32', imgSrc: 'media/cf.png', text: 'Cyber Frogs', mcc: true },
@@ -34,6 +36,7 @@ const collectionBoxArray = [
   { id: 'CPCK6qE47hhg2QrS5cP2TwWniNt5dJvGB1VcTu44izBy', imgSrc: 'media/gs.jpg', text: 'Grim Syndicate', mcc: true },
   { id: 'aLs8rXD8NoYwgnCFzBofsGdwaocePAkzT1UFX1WmwaR', imgSrc: 'media/basc.png', text: 'Bored Ape Solana Club', mcc: true },
   { id: '5f2zrjBonizqt6LiHSDfbTPH74sHMZFahYQGyPNh825G', imgSrc: 'media/wab.png', text: 'We Are Builders', mcc: true },
+
   { id: '4nGoPfgRW2nkAp6ELx8bYRxLVRrNB3Si8drp4PRuDa3Q', imgSrc: 'media/solmap.png', text: 'Open Solmap', mcc: false },
   { id: '4SSU34nYRUi73KvMNjhruF3iScQxjQty11jh8GwGDc2x', imgSrc: 'media/portals.png', text: 'Portals', mcc: true },
   { id: '7LxjzYdvXXDMxEmjS3aBC26ut4FMtDUae44nkHBPNVWP', imgSrc: 'media/dk.png', text: 'Dead King Society Kings', mcc: true },
@@ -42,7 +45,17 @@ const collectionBoxArray = [
   { id: '8d8CYjuy79LUtUow8UeToUs4Xo35LokYRkeukhJ6uriA', imgSrc: 'media/thugbird.jpg', text: 'Thugbirdz ¬¬', mcc: false },
   { id: '5tz9iHWWHr5PRQYPzLPvUMKXFCmPNPfdx5u4cha2Gj8T', imgSrc: 'media/banx.jpg', text: 'Banx', mcc: true },
   { id: 'uKmG23zipaSra6PPMWnc1M3avmUxaH4DeK28sjxWX6k', imgSrc: 'media/bozo.jpg', text: 'Bozos collective', mcc: true },
-  { id: 'F76YKLCTRanQsA5t2oKEZN8rTKMePMRKGxwHBga34fzV', imgSrc: 'media/skellies.jpg', text: 'Secret Skellies Society', MCC: true }
+  { id: 'F76YKLCTRanQsA5t2oKEZN8rTKMePMRKGxwHBga34fzV', imgSrc: 'media/skellies.jpg', text: 'Secret Skellies Society', mcc: true },
+
+  { id: 'AYxotyBNGmhgL7kcsD32DvMqg9k9MDWj1N11BSoJvcbM', imgSrc: 'media/bd.png', text: 'Boryoku Dragonz', mcc: true },
+  { id: 'Hx928h4TSe8DhWJftRkHVgKsbmy8fa5yjhUi2cftmjta', imgSrc: 'media/yogg.jpg', text: 'YoggDAO', mcc: true },
+  { id: '5uNSvWTeGajNAYZFidfTnorQRA8cDQCZSeuSyhLtnTD2', imgSrc: 'media/plague.png', text: 'Plague', mcc: false },
+  { id: '3pAx1gCrmcVFfGdVFRFaaqDEFq7ngung3nD3Q6mzs18x', imgSrc: 'media/solslugs.png', text: 'Sol Slugs', mcc: true },
+  { id: '5PM8LSPLA64gxgAMhr43vCssBM8Qs1B7MqZUZ5FrViC2', imgSrc: 'media/fracture.png', text: 'The Fracture', mcc: true },
+  { id: '2CNP3MVmCj5FEFja676PkvS8Rm7ZVCxdsPWkLgqHb87e', imgSrc: 'media/dc.png', text: 'Doge Capital', mcc: true },
+  { id: 'LouoPer39a8x9KZ4nWXmeSFetgorr82pEErhU9EmxZW', imgSrc: 'media/cets.png', text: 'Cets', mcc: true },
+  { id: '2HvN24Jc7Lgtj6CrHtWS6mLbgTWaw7s2kN4ggSEMibog', imgSrc: 'media/TombStoned.png', text: 'Tomb Stoned', mcc: true },
+  { id: '51QdJmx1GvGihrkAdSsiMjS2deUe19Pyy5rUBxUJ7Cjq', imgSrc: 'media/fuddles.png', text: 'Fuddles', mcc: true },
 ];
 
 window.onload = function () {
