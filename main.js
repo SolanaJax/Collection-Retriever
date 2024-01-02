@@ -56,6 +56,16 @@ const collectionBoxArray = [
   { id: 'LouoPer39a8x9KZ4nWXmeSFetgorr82pEErhU9EmxZW', imgSrc: 'media/cets.png', text: 'Cets', mcc: true },
   { id: '2HvN24Jc7Lgtj6CrHtWS6mLbgTWaw7s2kN4ggSEMibog', imgSrc: 'media/TombStoned.png', text: 'Tomb Stoned', mcc: true },
   { id: '51QdJmx1GvGihrkAdSsiMjS2deUe19Pyy5rUBxUJ7Cjq', imgSrc: 'media/fuddles.png', text: 'Fuddles', mcc: true },
+
+  { id: '9p6oG4bhKLycyhbhRGscYq6GbEDPDiGqLdXrJZtm5UWP', imgSrc: 'media/gummies.jpg', text: 'Gummies', mcc: true },
+  { id: 'J3ci56TKJrm3XapggRXMijNWnimPUvH6C6Yxjt2z9fBX', imgSrc: 'media/justape.jpg', text: 'Just Ape.', mcc: true },
+  { id: 'JE9tjZP9nGk6WhqzW6PEsX8Epxmd7aZLXZYy23VzxnDP', imgSrc: 'media/Oligarch.png', text: 'Oligarch', mcc: true },
+  { id: '86FaGSffUt6pmBEKQMqbpCTyNPjUfiF6EcE9HFzim3iT', imgSrc: 'media/OrdoNemesis.jpg', text: 'Ordo Nemesis', mcc: true },
+  { id: 'H4EQ8pcE7PQSQGG1WYW4hAA1nizU6ULYipHZcYk9b64u', imgSrc: 'media/FlashTrade.jpg', text: 'Flash Trade', mcc: true },
+  { id: '5f2PvbmKd9pRLjKdMr8nrK8fNisLi7irjB6X5gopnKpB', imgSrc: 'media/sharx.png', text: 'sharx by sharky.fi', mcc: true },
+  { id: '1yPMtWU5aqcF72RdyRD5yipmcMRC8NGNK59NvYubLkZ', imgSrc: 'media/sagaclay.png', text: 'Claynosaurz: Call of Saga', mcc: true },
+  { id: '44K6Cr5YvpZLdSrDbJmwRi74c2szTLRtvf5Gr8e5tdQc', imgSrc: 'media/GUIDES.png', text: 'GUIDES', mcc: true },
+  { id: 'FKYdqgpSzhqzP8b6WRcYjFPwLSpSGU7sqVpBSgQX5WEP', imgSrc: 'media/copium.png', text: 'Copium', mcc: true },
 ];
 
 window.onload = function () {
