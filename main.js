@@ -1,4 +1,4 @@
-const secureRPC = "https://jittery-charmian-fast-mainnet.helius-rpc.com/"
+const secureRPC = "https://jittery-charmian-fast-mainnet.helius-rpc.com/" //limited to 5 TPS per IP
 
 // List of blacklisted addresses in order (Tensor, Magiceden)
 const blacklistedMarketplaceOwners = [
@@ -66,7 +66,7 @@ const collectionBoxArray = [
   { id: '1yPMtWU5aqcF72RdyRD5yipmcMRC8NGNK59NvYubLkZ', imgSrc: 'media/sagaclay.png', text: 'Claynosaurz: Call of Saga', mcc: true },
   { id: '44K6Cr5YvpZLdSrDbJmwRi74c2szTLRtvf5Gr8e5tdQc', imgSrc: 'media/GUIDES.png', text: 'GUIDES', mcc: true },
   { id: 'FKYdqgpSzhqzP8b6WRcYjFPwLSpSGU7sqVpBSgQX5WEP', imgSrc: 'media/copium.png', text: 'Copium', mcc: true },
-];
+]
 
 window.onload = function () {
   const currentTheme = loadTheme()
@@ -105,10 +105,10 @@ function generateCollectionBoxes(collectionBoxArray) {
           <img src="${box.imgSrc}" />
           <div class="info-box">${box.text}</div>
       </div>
-  `).join('');
+  `).join('')
 }
 
-document.querySelector('.collection-grid').innerHTML = generateCollectionBoxes(collectionBoxArray);
+document.querySelector('.collection-grid').innerHTML = generateCollectionBoxes(collectionBoxArray)
 
 const inputField = document.getElementById("inputField")
 
@@ -182,19 +182,34 @@ document.querySelector(".copy-button").addEventListener("click", function () {
 
 })
 
-document.querySelector(".download-button").addEventListener("click", function () {
-    let code = document.getElementsByTagName("code")[0].textContent
-    let blob = new Blob([code], { type: "application/json" })
-    let url = URL.createObjectURL(blob)
-
-    let a = document.createElement("a")
-    a.href = url
-    a.download = "holderlist.json"
-    document.body.appendChild(a)
-    a.click()
-    document.body.removeChild(a)
-    URL.revokeObjectURL(url)
+document.querySelector(".download-json-button").addEventListener("click", function () {
+  let code = document.getElementsByTagName("code")[0].textContent
+  downloadFile(code, 'holderlist.json', 'application/json')
 })
+
+
+document.querySelector(".download-csv-button").addEventListener("click", function () {
+  let json = document.getElementById("JSON-CODE").textContent
+  let data = JSON.parse(json)
+  let csv = jsonToCSV(data)
+  downloadFile(csv, 'holderlist.csv', 'text/csv')
+})
+
+function downloadFile(content, fileName, mimeType) {
+  let blob = new Blob([content], { type: mimeType })
+  let url = URL.createObjectURL(blob)
+  let a = document.createElement("a")
+  a.href = url
+  a.download = fileName
+  document.body.appendChild(a)
+  a.click()
+  document.body.removeChild(a)
+  URL.revokeObjectURL(url)
+}
+
+function jsonToCSV(jsonArray) {
+  return jsonArray.join('\n')
+}
 
 function fillInput(id, MCC, text) {
   document.getElementById("holderCollectionList").textContent = "Get Holderlist For: " + text
