@@ -1,3 +1,5 @@
+const solanaweb3 = window.solanaWeb3;
+
 const secureRPC = "https://jittery-charmian-fast-mainnet.helius-rpc.com/" //limited to 5 TPS per IP
 
 // List of blacklisted addresses in order (Tensor, Magiceden)
@@ -66,6 +68,16 @@ const collectionBoxArray = [
   { id: '1yPMtWU5aqcF72RdyRD5yipmcMRC8NGNK59NvYubLkZ', imgSrc: 'media/sagaclay.png', text: 'Claynosaurz: Call of Saga', mcc: true },
   { id: '44K6Cr5YvpZLdSrDbJmwRi74c2szTLRtvf5Gr8e5tdQc', imgSrc: 'media/GUIDES.png', text: 'GUIDES', mcc: true },
   { id: 'FKYdqgpSzhqzP8b6WRcYjFPwLSpSGU7sqVpBSgQX5WEP', imgSrc: 'media/copium.png', text: 'Copium', mcc: true },
+
+  { id: 'CLBrjmoDCFvrW8ukxXtDrBXWkL7Yx8PKspKaBPFxhpmL', imgSrc: 'media/smyths.jpg', text: 'Smyths', mcc: true },
+  { id: 'HNv9G2NxgZEWLxmzFqSCWYk4moUYvNrWjbq6AY2AHJKF', imgSrc: 'media/meegos.png', text: 'Meegos', mcc: true },
+  { id: 'HEAKpy99JuLhfinuLgji757JxHvPizBo7WaXvWBYc3kz', imgSrc: 'media/bvd.jpg', text: 'BVDCAT', mcc: true },
+  { id: '71tyVbvaxjuQze8wXG7Gxsc8HRPnehX349VcGFzKskZA', imgSrc: 'media/jr.png', text: 'Jelly Rascals', mcc: true },
+  { id: 'G1RXBcPyBYNNxqm7n3No5yk27H3efY958ZpybJcu3pNK', imgSrc: 'media/ll.png', text: 'The Lowlifes [0.G]', mcc: true },
+  { id: 'HF6SFg5RkWNQrEhmnXV7H8EmLPxg3jDaggEni1SMVAi6', imgSrc: 'media/daa.png', text: 'Degenerate Ape Academy: Higher Self', mcc: true },
+  { id: 'GoLMLLR6iSUrA6KsCrFh7f45Uq5EHFQ3p8RmzPoUH9mb', imgSrc: 'media/tp.png', text: 'Degenerate Trash Pandas', mcc: true },
+  { id: 'CL4Y2SoxZXS8LScCQf7nFmvJZ2QNLYP1n6iiyK8vSL7x', imgSrc: 'media/bm.jpg', text: 'Bear Market', mcc: true },
+  { id: '7rSkBx7GdAYzXPS4MLoPx1aCGn25VsdDRvQnnZYQY13H', imgSrc: 'media/ls.jpg', text: 'Liberty Square', mcc: true },
 ]
 
 window.onload = function () {
@@ -315,6 +327,7 @@ const fetchMCC = async (creatorAddress, marketplace) => {
         holderList.push(nfts.ownership.owner)
       }
     }
+
 
     if (result.total !== 1000) {
       page = false
