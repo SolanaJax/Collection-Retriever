@@ -78,6 +78,16 @@ const collectionBoxArray = [
   { id: 'GoLMLLR6iSUrA6KsCrFh7f45Uq5EHFQ3p8RmzPoUH9mb', imgSrc: 'media/tp.png', text: 'Degenerate Trash Pandas', mcc: true },
   { id: 'CL4Y2SoxZXS8LScCQf7nFmvJZ2QNLYP1n6iiyK8vSL7x', imgSrc: 'media/bm.jpg', text: 'Bear Market', mcc: true },
   { id: '7rSkBx7GdAYzXPS4MLoPx1aCGn25VsdDRvQnnZYQY13H', imgSrc: 'media/ls.jpg', text: 'Liberty Square', mcc: true },
+
+  { id: '8kb4ijUwB3xYthkiiFTKfLtf9Pq6trMAVNofB7dohYrP', imgSrc: 'media/im.png', text: 'indie monkes', mcc: true },
+  { id: 'Eyrmgx1G4bUYohs81NK4gPsbAgVmaWf8XwdwSdCB7swT', imgSrc: 'media/o.jpg', text: 'Ogres', mcc: false },
+  { id: '4EaFiJNsoQzvTQckxZVsPfSttpgAT1Tehtg6bp7AuSfg', imgSrc: 'media/rs.png', text: 'Rogue Sharks', mcc: true },
+  { id: 'rad7j6PpBLzBas3Yrt59Tsd5ohVuyt614PkBYznBh1a', imgSrc: 'media/radiants.png', text: 'Radiants', mcc: true },
+  { id: '3YjEwfk2V6HTQkm5ui3Nd4DDFbPiMmK5LCqCmcat4hEL', imgSrc: 'media/pl.png', text: 'Ubik Labs | Promised Land', mcc: true },
+  { id: 'Aorbs5ot6Jp47T1BnhDpgFkutd11FpU8qpkZN5FhsB8a', imgSrc: 'media/gaimin.jpg', text: 'Gaimin Gladiators', mcc: false },
+  { id: 'F2puSG2Bq9vy1BLbUg7nobfRVWUTCm1gkCHFMvQyc16L', imgSrc: 'media/sp.png', text: 'Solana Punks', mcc: false },
+  { id: '4SGxGZBhWQKzTe4mNkspgnBmipobCxA21wSrZ8xgoNNd', imgSrc: 'media/x.png', text: 'PAPU PARTY ROCK', mcc: false },
+  { id: '7BQdHnBKERaCYCnwLbbSoYHQZxcq7zLenYERDp94o18z', imgSrc: 'media/a.png', text: 'Aurory', mcc: true },
 ]
 
 window.onload = function () {
