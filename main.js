@@ -9,21 +9,21 @@ const blacklistedMarketplaceOwners = [
 ]
 
 const collectionBoxArray = [
-  { id: '46pcSL5gmjBrPqGKFaLbbCmR6iVuLJbnQy13hAe7s6CC', imgSrc: 'media/genesistoken.png', text: 'Saga Genesis Token', mcc: true },
-  { id: '6mszaj17KSfVqADrQj3o4W3zoLMTykgmV37W4QadCczK', imgSrc: 'media/claynosaurz.png', text: 'Claynosaurz', mcc: true },
+  { id: '46pcSL5gmjBrPqGKFaLbbCmR6iVuLJbnQy13hAe7s6CC', imgSrc: 'media/genesis.gif', text: 'Saga Genesis Token', mcc: true },
+  { id: 'GokAiStXz2Kqbxwz2oqzfEXuUhE7aXySmBGEP7uejKXF', imgSrc: 'media/SagaMonkes.gif', text: 'Saga Monkes', mcc: true },
   { id: 'J1S9H3QjnRtBbbuD4HjPV6RpRhwuk4zKbxsnCHuTgh9w', imgSrc: 'media/madlads.jpg', text: 'Mad Lads', mcc: true },
   { id: 'ABFpGsZBHdfsst5HoCdHXfV17eNEP6cQAFqpV3HApUYi', imgSrc: 'media/namaste.png', text: 'Namaste by Solana Sensei', mcc: true },
   { id: 'SMBtHCCC6RYRutFEPb4gZqeBLUZbMNhRKaMKZZLHi7W', imgSrc: 'media/smb2.png', text: 'SMB2', mcc: true },
   { id: '8Rt3Ayqth4DAiPnW9MDFi63TiQJHmohfTWLMQFHi4KZH', imgSrc: 'media/smb3.png', text: 'SMB3', mcc: true },
   { id: 'BuAYoZPVwQw4AfeEpHTx6iGPbQtB27W7tJUjgyLzgiko', imgSrc: 'media/quekz.png', text: 'Quekz', mcc: true },
-  { id: '3saAedkM9o5g1u5DCqsuMZuC4GRqPB4TuMkvSsSVvGQ3', imgSrc: 'media/okaybear.png', text: 'Okay Bear', mcc: true },
+  { id: '6mszaj17KSfVqADrQj3o4W3zoLMTykgmV37W4QadCczK', imgSrc: 'media/claynosaurz.png', text: 'Claynosaurz', mcc: true },
   { id: 'J6RJFQfLgBTcoAt3KoZFiTFW9AbufsztBNDgZ7Znrp1Q', imgSrc: 'media/gg.png', text: 'Galactic Gecko', mcc: true },
 
   { id: 'HLGE9SnPUzS5wWdLXbqbmKiTpUxWKjRFL78y6uey8pSe', imgSrc: 'media/metame.jpg', text: 'Metame', mcc: true },
   { id: '69k55dCTwiUPNgaTZ8FVMADorTvEGJEGuAGEB7m1qB1S', imgSrc: 'media/bodo.jpg', text: 'BoDoggos', mcc: true },
   { id: 'ESWcNfagB4ixp5byYRAwR8VrsrX9FMpL2D5EPZD8ga8Q', imgSrc: 'media/rex.jpg', text: 'Annoyed Rex Club', mcc: false },
   { id: 'F645t6gugvsmfo5uSm72WsChY4prdUDMkjaSmppvbvb9', imgSrc: 'media/whales.png', text: 'THE WHALES', mcc: true },
-  { id: 'Gvj3urg4ZQYQ4BRQpA8SeAX6GhuvRbvfB3TVVEKeKBnb', imgSrc: 'media/bonkz.png', text: 'Bonkz', mcc: true },
+  { id: '3saAedkM9o5g1u5DCqsuMZuC4GRqPB4TuMkvSsSVvGQ3', imgSrc: 'media/okaybear.png', text: 'Okay Bear', mcc: true },
   { id: '5ucdKHbPfmsWowXSNfHoiYEJ55kfFmvEdHii5RtjHpiH', imgSrc: 'media/wolf.jpg', text: 'Wolf Capital', mcc: true },
   { id: '8vE4uASPp9WbS9Ls2qzJ9fpUBpR3UrTG3hBZXdAJQ9mz', imgSrc: 'media/mbb.png', text: 'Monkey Baby Business', mcc: true },
   { id: 'DSwfRF1jhhu6HpSuzaig1G19kzP73PfLZBPLofkw6fLD', imgSrc: 'media/daa.png', text: 'Degenerate Ape Academy', mcc: true },
