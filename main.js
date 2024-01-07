@@ -23,7 +23,7 @@ const collectionBoxArray = [
   { id: '69k55dCTwiUPNgaTZ8FVMADorTvEGJEGuAGEB7m1qB1S', imgSrc: 'media/bodo.jpg', text: 'BoDoggos', mcc: true },
   { id: 'ESWcNfagB4ixp5byYRAwR8VrsrX9FMpL2D5EPZD8ga8Q', imgSrc: 'media/rex.jpg', text: 'Annoyed Rex Club', mcc: false },
   { id: 'F645t6gugvsmfo5uSm72WsChY4prdUDMkjaSmppvbvb9', imgSrc: 'media/whales.png', text: 'THE WHALES', mcc: true },
-  { id: '3saAedkM9o5g1u5DCqsuMZuC4GRqPB4TuMkvSsSVvGQ3', imgSrc: 'media/okaybear.png', text: 'Okay Bear', mcc: true },
+  { id: 'uKmG23zipaSra6PPMWnc1M3avmUxaH4DeK28sjxWX6k', imgSrc: 'media/bozo.jpg', text: 'Bozos collective', mcc: true },
   { id: '5ucdKHbPfmsWowXSNfHoiYEJ55kfFmvEdHii5RtjHpiH', imgSrc: 'media/wolf.jpg', text: 'Wolf Capital', mcc: true },
   { id: '8vE4uASPp9WbS9Ls2qzJ9fpUBpR3UrTG3hBZXdAJQ9mz', imgSrc: 'media/mbb.png', text: 'Monkey Baby Business', mcc: true },
   { id: 'DSwfRF1jhhu6HpSuzaig1G19kzP73PfLZBPLofkw6fLD', imgSrc: 'media/daa.png', text: 'Degenerate Ape Academy', mcc: true },
@@ -46,7 +46,7 @@ const collectionBoxArray = [
   { id: 'AuV8qcAQVnCJr6yU9go6X1VR3MAQZuiDRRS7twhq1qAU', imgSrc: 'media/frog.jpg', text: 'Froganas', mcc: false },
   { id: '8d8CYjuy79LUtUow8UeToUs4Xo35LokYRkeukhJ6uriA', imgSrc: 'media/thugbird.jpg', text: 'Thugbirdz ¬¬', mcc: false },
   { id: '5tz9iHWWHr5PRQYPzLPvUMKXFCmPNPfdx5u4cha2Gj8T', imgSrc: 'media/banx.jpg', text: 'Banx', mcc: true },
-  { id: 'uKmG23zipaSra6PPMWnc1M3avmUxaH4DeK28sjxWX6k', imgSrc: 'media/bozo.jpg', text: 'Bozos collective', mcc: true },
+  { id: '3saAedkM9o5g1u5DCqsuMZuC4GRqPB4TuMkvSsSVvGQ3', imgSrc: 'media/okaybear.png', text: 'Okay Bear', mcc: true },
   { id: 'F76YKLCTRanQsA5t2oKEZN8rTKMePMRKGxwHBga34fzV', imgSrc: 'media/skellies.jpg', text: 'Secret Skellies Society', mcc: true },
 
   { id: 'AYxotyBNGmhgL7kcsD32DvMqg9k9MDWj1N11BSoJvcbM', imgSrc: 'media/bd.png', text: 'Boryoku Dragonz', mcc: true },
