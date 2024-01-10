@@ -160,16 +160,14 @@ document.getElementById("input-form").addEventListener("submit", async function 
 
   let data
 
-  if (document.getElementById("MCC-checkbox").checked) {
-    data = await fetchMCC(
-      event.target.elements["inputField"].value,
-      marketplace
-    )
+  if (document.getElementById("hashlist-checkbox").checked && document.getElementById("MCC-checkbox").checked) {
+    data = await fetchMCC(event.target.elements["inputField"].value, marketplace, true)
+  } else if (document.getElementById("hashlist-checkbox").checked) {
+    data = await fetchCreatorArrayCollection(event.target.elements["inputField"].value, marketplace, true)
+  } else if (document.getElementById("MCC-checkbox").checked) {
+    data = await fetchMCC(event.target.elements["inputField"].value, marketplace)
   } else {
-    data = await fetchCreatorArrayCollection(
-      event.target.elements["inputField"].value,
-      marketplace
-    )
+    data = await fetchCreatorArrayCollection(event.target.elements["inputField"].value, marketplace)
   }
 
   document.getElementById("resultQTY").textContent = "Result: " + data.length
@@ -245,7 +243,7 @@ function fillInput(id, MCC, text) {
   hideJSONViewer()
 }
 
-const fetchCreatorArrayCollection = async (creatorAddress, marketplace) => {
+const fetchCreatorArrayCollection = async (creatorAddress, marketplace, hashlist) => {
   let page = 1
   let mintList = []
   let holderList = []
@@ -286,6 +284,10 @@ const fetchCreatorArrayCollection = async (creatorAddress, marketplace) => {
     }
   }
 
+  if (hashlist) {
+    return mintList
+  }
+
   if (marketplace) {
     for (const holderAddress of holderList) {
       let blacklisted = false
@@ -304,7 +306,7 @@ const fetchCreatorArrayCollection = async (creatorAddress, marketplace) => {
   }
 }
 
-const fetchMCC = async (creatorAddress, marketplace) => {
+const fetchMCC = async (creatorAddress, marketplace, hashlist) => {
   let page = 1
   let mintList = []
   let holderList = []
@@ -344,6 +346,10 @@ const fetchMCC = async (creatorAddress, marketplace) => {
     } else {
       page++
     }
+  }
+
+  if (hashlist) {
+    return mintList
   }
 
   if (marketplace) {
