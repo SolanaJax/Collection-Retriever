@@ -1,6 +1,6 @@
 const solanaweb3 = window.solanaWeb3;
 
-const secureRPC = "https://jittery-charmian-fast-mainnet.helius-rpc.com/" //limited to 5 TPS per IP
+const secureRPC = "https://mainnet.helius-rpc.com/?api-key=3d76ed43-ead2-43bc-8218-6d07403af290" //limited to 5 TPS per IP
 
 // List of blacklisted addresses in order (Tensor, Magiceden)
 const blacklistedMarketplaceOwners = [
