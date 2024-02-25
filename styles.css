@@ -267,6 +267,24 @@ button[type="submit"].loading-out {
     margin-bottom: 10px;
 }
 
+.clickable-banner {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+    width: 40vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+.clickable-banner:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.clicked {
+    transform: scale(0.45);
+}
+
+
 @keyframes loadingInAnimation {
     0% {
         width: 100%;
